@@ -1,4 +1,4 @@
-package com.example.aluraviagens
+package com.example.viagens
 
 import androidx.test.platform.app.InstrumentationRegistry
 import androidx.test.ext.junit.runners.AndroidJUnit4

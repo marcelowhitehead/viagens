@@ -1,8 +1,7 @@
-package com.example.aluraviagens.dao
+package com.example.viagens.dao
 
-import com.example.aluraviagens.model.Pacote
+import com.example.viagens.model.Pacote
 import java.math.BigDecimal
-import kotlin.collections.ArrayList
 
 class PacoteDAO {
 

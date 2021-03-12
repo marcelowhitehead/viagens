@@ -1,4 +1,4 @@
-package com.example.aluraviagens
+package com.example.viagens
 
 import org.junit.Test
 

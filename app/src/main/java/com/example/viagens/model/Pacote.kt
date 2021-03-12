@@ -1,4 +1,4 @@
-package com.example.aluraviagens.model
+package com.example.viagens.model
 
 import java.math.BigDecimal
 
