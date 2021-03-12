@@ -1,0 +1,28 @@
+{
+  "pacotes": [
+    {
+      "local" : "São Paulo",
+      "imagem" : "@drawable/sao_paulo",
+      "dias" : "2 dias",
+      "preco" : "R$ 243,99"
+    },
+    {
+      "local" : "Belo Horizonte",
+      "imagem" : "@drawable/belo_horizonte",
+      "dias" : "4 dias",
+      "preco" : "R$ 857,69"
+    },
+    {
+      "local" : "Maragogi",
+      "imagem" : "@drawable/maragogi",
+      "dias" : "7 dias",
+      "preco" : "R$ 2436,99"
+    },
+    {
+      "local" : "Natal",
+      "imagem" : "@drawable/natal_rn",
+      "dias" : "7 dias",
+      "preco" : "R$ 1230,57"
+    }
+  ]
+}
