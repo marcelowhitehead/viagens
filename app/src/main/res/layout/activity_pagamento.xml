@@ -1,0 +1,196 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.activity.PagamentoActivity">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:id="@+id/pagamento_orientacao"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="20dp"
+            android:gravity="center"
+            android:text="@string/pagamento_title_information"
+            android:textColor="@color/black"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/pagamento_valor_da_compra"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="8dp"
+            android:layout_marginTop="20dp"
+            android:text="@string/pagamento_valor_da_compra"
+            android:textColor="@color/black"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/pagamento_orientacao" />
+
+        <TextView
+            android:id="@+id/pagamento_preco_pacote"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:textColor="@android:color/holo_green_dark"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="@+id/pagamento_valor_da_compra"
+            app:layout_constraintTop_toBottomOf="@+id/pagamento_valor_da_compra"
+            tools:text="R$ 421,50" />
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/pagamento_layout_numero_cartao"
+            style="@style/Widget.MaterialComponents.TextInputLayout.FilledBox"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="8dp"
+            android:backgroundTint="@color/black"
+            app:boxBackgroundColor="@color/white"
+            app:boxStrokeColor="@android:color/holo_green_dark"
+            app:hintTextAppearance="@style/TextAppearance.AppCompat.Light.SearchResult.Subtitle"
+            app:hintTextColor="@color/black"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/pagamento_preco_pacote">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/pagamento_edit_numero_cartao"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/pagamento_card_number"
+                android:inputType="number"
+                android:maxLength="12"
+                android:textColorHint="@color/black" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/pagamento_layout_mes"
+            style="@style/Widget.MaterialComponents.TextInputLayout.FilledBox"
+            android:layout_width="60dp"
+            android:layout_height="wrap_content"
+            android:backgroundTint="@color/black"
+            app:boxBackgroundColor="@color/white"
+            app:boxStrokeColor="@android:color/holo_green_dark"
+            app:hintTextAppearance="@style/TextAppearance.AppCompat.Small"
+            app:hintTextColor="@color/black"
+            app:layout_constraintBottom_toBottomOf="@+id/pagamento_layout_cvc"
+            app:layout_constraintStart_toStartOf="@+id/pagamento_layout_numero_cartao">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/pagamento_edit_mes"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:hint="@string/pagamento_card_month"
+                android:inputType="number"
+                android:maxLength="2"
+                android:textColorHint="@color/black" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/pagamento_layout_ano"
+            style="@style/Widget.MaterialComponents.TextInputLayout.FilledBox"
+            android:layout_width="60dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="8dp"
+            android:backgroundTint="@color/black"
+            app:boxBackgroundColor="@color/white"
+            app:boxStrokeColor="@android:color/holo_green_dark"
+            app:hintTextAppearance="@style/TextAppearance.AppCompat.Small"
+            app:hintTextColor="@color/black"
+            app:layout_constraintBottom_toBottomOf="@+id/pagamento_layout_cvc"
+            app:layout_constraintStart_toEndOf="@+id/pagamento_layout_mes">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/pagamento_edit_ano"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:hint="@string/pagamento_card_year"
+                android:inputType="number"
+                android:maxLength="2"
+                android:textColorHint="@color/black" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/pagamento_layout_cvc"
+            style="@style/Widget.MaterialComponents.TextInputLayout.FilledBox"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:backgroundTint="@color/black"
+            app:boxBackgroundColor="@color/white"
+            app:boxStrokeColor="@android:color/holo_green_dark"
+            app:hintTextAppearance="@style/TextAppearance.AppCompat.Small"
+            app:hintTextColor="@color/black"
+            app:layout_constraintEnd_toEndOf="@+id/pagamento_layout_numero_cartao"
+            app:layout_constraintTop_toBottomOf="@+id/pagamento_layout_numero_cartao"
+            app:startIconDrawable="@drawable/ic_cvc_cartao_de_credito">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/pagamento_edit_cvc"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:hint="@string/pagamento_card_cvc"
+                android:inputType="number"
+                android:maxLength="3"
+                android:textColorHint="@color/black" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/pagamento_layout_nome_cartao"
+            style="@style/Widget.MaterialComponents.TextInputLayout.FilledBox"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="8dp"
+            android:layout_marginTop="8dp"
+            android:backgroundTint="@color/black"
+            app:boxBackgroundColor="@color/white"
+            app:boxStrokeColor="@android:color/holo_green_dark"
+            app:hintTextAppearance="@style/TextAppearance.AppCompat.Light.SearchResult.Subtitle"
+            app:hintTextColor="@color/black"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/pagamento_layout_cvc">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/pagamento_edit_nome_cartao"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:digits="@string/pagamento_mascara_nome_cartao"
+                android:hint="@string/pagamento_card_name"
+                android:inputType="text"
+                android:textColorHint="@color/black" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <Button
+            android:id="@+id/pagamento_botao_finaliza_compra"
+            style="@style/Widget.Button.UnelevatedButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="8dp"
+            android:layout_marginTop="8dp"
+            android:text="@string/pagamento_button_finish"
+            app:layout_constraintEnd_toEndOf="@+id/pagamento_layout_nome_cartao"
+            app:layout_constraintStart_toStartOf="@+id/pagamento_layout_nome_cartao"
+            app:layout_constraintTop_toBottomOf="@+id/pagamento_layout_nome_cartao" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+</ScrollView>

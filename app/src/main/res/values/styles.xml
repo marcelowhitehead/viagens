@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:tools="http://schemas.android.com/tools">
+
+    <style name="ThemeOverlay.Widget.Button.UnelevatedButton" parent="">
+        <item name="colorPrimary">@android:color/holo_orange_dark</item>
+        <item name="colorOnPrimary">@color/white</item>
+    </style>
+
+    <style name="Widget.Button.UnelevatedButton" parent="Widget.MaterialComponents.Button.UnelevatedButton">
+        <item name="materialThemeOverlay">@style/ThemeOverlay.Widget.Button.UnelevatedButton</item>
+        <item name="android:background">@drawable/botao_redondo_laranja</item>
+    </style>
+</resources>
